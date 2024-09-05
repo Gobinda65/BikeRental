@@ -1,0 +1,81 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- css Link -->
+    <link rel="stylesheet" href="{%static 'myapp/css/style.css'%}">
+    <!-- Box icon -->
+    <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">Bike<span>Rental</span></a>
+
+        <ul class="navbar">
+            <li><a href="{% url 'home-page'%}">Home</a></li>
+            <li><a href="{% url 'about-page'%}">About</a></li>
+            <li><a href="{% url 'services-page'%}">Services</a></li>
+            <li><a href="{% url 'review-page'%}">Review</a></li>
+            <li><a href="{% url 'contactus-page'%}">Contact Us</a></li>
+        </ul>
+        <div class="header-btn">
+            <a href="{% url 'singup-page'%}" class="sign-up">Sign Up</a>
+            <a href="{%url 'login-page'%}" class="sign-in">Login</a>
+        </div>
+    </header>
+    <!-- Footer section -->
+    <footer class="footer">
+        <div class="content">
+            <section id="Contact Us"></section>
+            <div class="row">
+                <div class="column">
+                    <h2>Information</h2>
+                    <p>We would love to visit with you by<br> phone or in person and talk about<br> your wedding, event, portrait session<br> or video project. Please reach out to<br> us through the Contact Page.</p>
+                    <div class="icon">
+                    <a href="https://www.facebook.com/profile.php?id=61550364894911&mibextid=ZbWKwL"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/p/C-lL5-kyGnf/?igsh=ZTBpaTMzaGF5anpr"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                </div>
+        
+                </div>
+                <div class="column">
+                    <h2>Useful Links</h2>
+                    <ul>
+                        <li><a href="{% url 'home-page'%}">Home</a></li>
+                        <li><a href="{% url 'about-page'%}">About</a></li>
+                        <li><a href="{% url 'services-page'%}">Services</a></li>
+                        <li><a href="{% url 'review-page'%}">Review</a></li>
+                        <li><a href="{% url 'contactus-page'%}">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="column">
+                    <h2>Help & Support</h2>
+                    <ul>
+                        <li><a href="#">Privacy policy</a></li>
+                        <li><a href="#">Term & Condition</a></li>
+                        <li><a href="#">Technical support</a></li>
+                        <li><a href="#">Customer care</a></li>
+                    </ul>
+                </div>
+                <div class="column">
+                    <h2>Our Location</h2>
+                    <div class="map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7375.428718474543!2d88.42010463876768!3d22.43977443484657!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a0272687ccfca2d%3A0x96238c8b629e4fdd!2sSonarpur%2C%20Kolkata%2C%20West%20Bengal%20700150!5e0!3m2!1sen!2sin!4v1690639346162!5m2!1sen!2sin" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                </div>
+            </div>
+        </div>
+        <div class="footerBottom">
+            <p>Copyright &copy;2024; Designed by <span class="designer">BikeRentel</span></p>
+        </div>
+    </footer>
+    <!-- Link js Files -->
+   <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <!-- css Link -->
+    <link rel="stylesheet" href="{%static 'myapp/css/style.css'%}">
+    <!-- Box icon -->
+    <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">Bike<span>Rental</span></a>
+
+        <ul class="navbar">
+            <li><a href="{% url 'home-page'%}"class="active">Home</a></li>
+            <li><a href="{% url 'about-page'%}">About</a></li>
+            <li><a href="{% url 'services-page'%}">Services</a></li>
+            <li><a href="{% url 'review-page'%}">Review</a></li>
+            <li><a href="{% url 'contactus-page'%}">Contact Us</a></li>
+            {% comment %} <li><a href="{% url 'reg-page'%}">Registration</a></li> {% endcomment %}
+        </ul>
+        <div class="header-btn">
+            <a href="{% url 'singup-page'%}" class="sign-up">Sign Up</a>
+            <a href="{%url 'login-page'%}" class="sign-in">Login</a>
+        </div>
+    </header>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <h1> <center>Read More</center></h1>
+    <p>Our team of ninjas aim to bridge the gap between bike fanatics and their need for a perfect go-to for all their biking needs. Whether you’re a student in a new city or someone who just joined work - you can rent a bike for a day, a week or even a couple of months, leave your bikes at the station for some good ol’ maintenance and pick up some exclusive merch too! Whether you’re a startup with a small sales team or a food delivery giant, a logistics company or a renowned restaurant - for everything that depends on two wheels -</p>
+
+    <!-- footer -->

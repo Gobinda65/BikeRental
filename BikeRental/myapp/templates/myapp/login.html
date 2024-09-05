@@ -1,0 +1,60 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="Description" content="Enter your description here"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<link rel="stylesheet" href="{%static 'myapp/css/style2.css'%}">
+<link rel="stylesheet" href="{%static 'myapp/css/style.css'%}">
+<title>login page</title>
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">Bike<span>Rental</span></a>
+
+        <ul class="navbar">
+            <li><a href="{% url 'home-page'%}">Home</a></li>
+            <li><a href="{% url 'about-page'%}">About</a></li>
+            <li><a href="{% url 'services-page'%}">Services</a></li>
+            <li><a href="{% url 'review-page'%}">Review</a></li>
+            <li><a href="{% url 'contactus-page'%}">Contact Us</a></li>
+        </ul>
+        <div class="header-btn">
+            <a href="{% url 'singup-page'%}" class="sign-up">Sign Up</a>
+            <a href="{%url 'login-page'%}" class="sign-in">Login</a>
+        </div>
+    </header>
+    {% comment %} <!-- home -->
+    <section class="home" id="home">
+        <div class="text">
+            <h1><span>Looking</span> to <br>rent a Bike</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adi<br>pisicing elit. Facere, quis vero?</p>
+            <div class="p-btn">
+                <a href="#" class="read">read more</a>
+        </div>
+    </section> {% endcomment %}
+    <div class="main">
+        <form action="" method="post">
+            {%csrf_token%}
+          <h1 class="hi">Login Here</h1>
+          <label for="username">Username</label>
+          <input type="text" placeholder=" Enter Username....." id="username" name="username" autofocus required>
+          <label for="password">Password</label>
+          <input type="password" placeholder="Enter password..." id="password" name="password" required><br><br>
+          <b><input class="submit" type="submit" value="Signup"></b><br><br>
+          <p>New Here?<a href="{% url 'singup-page'%}" href="singup.html">Create an account</a></p>
+        </form>
+        {% if User %}
+        user name & password are not to match{{User}}
+        {% endif %}
+    </div>
+    <a href="singup.html"></a>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+</body>
+</html>
